@@ -4,10 +4,11 @@ type ButtonPropsType = {
 };
 
 export const Button = ({callBack, name}: ButtonPropsType) => {
+  const callbackHandler = () => callBack()
 
   return (
-    <button id={'hw04-button'} onClick={callBack}>
+    <button id={'hw04-button'} onClick={callbackHandler}>
       {name}
     </button>
-  );
-};
+  )
+}
